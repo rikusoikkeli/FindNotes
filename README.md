@@ -5,11 +5,19 @@ Every day I take a lot of notes. I write down most of everything that I think ab
 
 Because of that, I quickly realised that I needed a way to search through all those .txt files in a swift manner. That is why I developed this command line application.
 
-I didn't want to download a commercial product for the following reasons: Commercial products often use very specific file formats that bind oneself to their application or the operating system one is using. They're also cluttered with features that most people don't need. Moreover, what happens if I want to send my notes to a different computer? What happens if the developers stop developing the app that I've learned to rely on? Or what happens if I realise that I need an extra feature?
+I didn't want to download a commercial product for the following reasons: Commercial products often use very specific file formats that bind the user to their application or to a specific operating system. They're also cluttered with features that most people don't need. And their graphical UIs are slow to use.
 
-I just want to open a Notepad (win+"note"+enter) and start instantly writing. And after, I want to be able to find that which I wrote quickly and easily. And I want to get adjusted to a reliable workflow that I know will serve me for the following decade regardless of what machine I'm on. And regardless of what needs I will develop.
+I mean, what happens if I want to send my notes to a different computer? What happens if the developers stop developing the app that I've learned to rely on? Or what happens if I realise that I need an extra feature?
 
-I'm really happy about this program. It's right there in my top 10 most used programs. An inseparable part of my daily workflow.
+I just want to open a Notepad and start instantly writing: win+"notepad"+enter 
+
+And after, I want to be able to find that which I wrote quickly: win+"cmd"+enter+"findnotes -q query -p path" 
+
+Moreover, I want to get adjusted to a reliable workflow that I know will serve me for the following decade regardless of what machine I'm on. And regardless of what needs I will accrue.
+
+And I really hate to use the mouse. Ain't got nobody time for that.
+
+I'm happy about this program. It's right there in my top 10 most used programs. An inseparable part of my daily workflow.
 
 ## How to use
 1) Add the program's executable into Windows path
