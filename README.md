@@ -18,7 +18,7 @@ And after, I want to be able to find that which I wrote quickly: *win+"cmd"+ente
 
 Moreover, I want to get adjusted to a reliable workflow that I know will serve me for the following decade regardless of what machine I'm on. And regardless of what needs I will accrue.
 
-And I really hate to use the mouse. Ain't got nobody time for that.
+And I really hate to use the mouse.
 
 I'm happy about this program. It's right there in my top 10 most used programs. An inseparable part of my daily workflow.
 
