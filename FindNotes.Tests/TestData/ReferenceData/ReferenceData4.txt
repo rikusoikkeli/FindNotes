@@ -1,0 +1,1 @@
+﻿foo: "C:\Users\riku.soikkeli\source\repos\FindNotesSolution2\FindNotes.Tests\bin\Debug\net5.0\TestData\FoldersToSearch\folder123"

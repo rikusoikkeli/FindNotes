@@ -1,0 +1,17 @@
+CONTROL ACCESS TO EVENTS
+
+Azure built-in roles for authorising access to Event Hubs data (using AAD and OAuth)
+- Azure Event Hubs Data Owner
+- Azure Event Hubs Data Sender
+- Azure Event Hubs Data Receiver
+
+
+Authorise access to publishers
+- A client that holds a token can only send to one publisher. If multiple clients share the same token, then each of them shares the publisher.
+- All tokens are assigned with shared access signature keys (typically with same key)
+	- Clients aren't aware of the key.
+
+
+Pluralsight: Developing Solutions for Microsoft Azure (AZ-204)
+	- "This path will help prepare you for a certification exam."
+

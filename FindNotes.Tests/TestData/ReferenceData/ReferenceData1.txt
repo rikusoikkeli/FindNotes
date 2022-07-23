@@ -1,0 +1,21 @@
+﻿INDEX   DATE            FILE                                   ROW      TEXT
+0	08/01/2022	08012022_az204_event-based_...	        3	azure built-in roles for authorising access to event hubs data (using aad and...	
+1	08/01/2022	08012022_az204_event-based_...	        4	- azure event hubs data owner	
+2	08/01/2022	08012022_az204_event-based_...	        5	- azure event hubs data sender	
+3	08/01/2022	08012022_az204_event-based_...	        6	- azure event hubs data receiver	
+4	01/01/2022	01012022_azure_event_hub_tu...	        4	- big data event streaming service	
+5	01/01/2022	01012022_azure_event_hub_tu...	        5	- scalable up to terabytes of data and millions of events per second	
+6	01/01/2022	01012022_azure_event_hub_tu...	        6	- reliable with zero data loss (agnostic to failures)	
+7	01/01/2022	01012022_azure_event_hub_tu...	       14	- archiving data	
+8	01/01/2022	01012022_azure_event_hub_tu...	       28	- event hub represents a unique stream of data	
+9	01/01/2022	01012022_azure_event_hub_tu...	       40	- consumer group is unique view on event hub data	
+
+10	01/01/2022	01012022_azure_event_hub_tu...	       41	- consumers are processes that read event data (amqp 1.0)	
+11	01/01/2022	01012022_azure_event_hub_tu...	       50	- enables automatic delivery of the streaming data to blob storage or data lake	
+12	01/01/2022	01012022_event_grid_demo.txt	       56	before subscribing to the custom topic, we need to create the endpoint for th...	
+13	01/01/2022	01012022_event_grid_demo.txt	       89	create event data to send. typically, an application or azure service would s...	
+14	01/01/2022	01012022_event_grid_demo.txt	       91	event='[ {"id": "'"$random"'", "eventtype": "recordinserted", "subject": "mya...	
+15	01/01/2022	01012022_event_grid_demo.txt	      108	"data": {	
+16	01/01/2022	01012022_event_grid_demo.txt	      112	"dataversion": "1.0",	
+17	01/01/2022	01012022_event_grid_demo.txt	      113	"metadataversion": "1",	
+

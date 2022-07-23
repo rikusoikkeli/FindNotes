@@ -1,0 +1,74 @@
+Azure Event Hub
+
+Key Service Characteristics
+- Big data event streaming service
+- Scalable up to terabytes of data and millions of events per second
+- Reliable with zero data loss (agnostic to failures)
+- Supports multiple protocols and SDKs
+
+When to use it?
+- Anomaly detection (fraud/outliers)
+- Application logging
+- Analytics pipelines, such as clickstreams
+- Live dashboarding
+- Archiving data
+- Transaction processing
+- User telemetry processing
+- Device telemetry streaming
+
+Key Concepts
+- Event producers send events via AMQP, HTTP or Apache Kafka
+- Separated (Event Hub) in 1* to 32 partitions
+- Load balanced distribution (of events between partitions)
+- Each partition is ordered
+	- e.g. all events in partition 4 are ordered from oldest to newest
+- Partition Key allows for ordered processing
+	- By definition, order is not maintained across partitions
+	- Add partition key to events so they'll land into the same partition
+- Event hub represents a unique stream of data
+- Event hub namespace is a collection of event hubs
+	- Scoping container
+	- Shared properties
+	- Accessible via FQDN
+
+When you create Event Hubs resource in Azure, you create an Event Hub namespace
+
+To connect to an Event Hub through an SDK, you need a connection string
+- Event Hubs Instance -> Shared access policies -> Add -> Connection string-primary key
+
+Key Concepts 2
+- Consumer Group is unique view on event hub data
+- Consumers are processes that read event data (AMQP 1.0)
+- Offset is the position of an event
+- Checkpointing is a progress of saving offset on client side
+	- If you have millions of events and client dies, you don't want to start from beginning
+	- Each consumer group manages its own checkpointing
+	- SDKs can save offsets to Azure blob storage
+
+What else do you get?
+	- Event Capture
+		- Enables automatic delivery of the streaming data to blob storage or data lake
+	- Auto scaling with auto-inflate
+	- Geo-disaster recovery via geo-replication with region pairing
+
+
+************************************************************************************************
+
+Explore Azure Event Hubs
+Link: https://docs.microsoft.com/en-gb/learn/modules/azure-event-hubs/
+
+- Azure Event Hubs represents the "front door" for an event pipeline
+	- aka event ingestor
+		- sits between publishers and consumers for decoupling purposes
+- PaaS (Platform as a Service)
+
+Key concepts
+- A consumer group 
+	- it is recommended that there is only one active consumer for a given partition and 	consumer group pairing
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+﻿INDEX   DATE            FILE                                   ROW      TEXT
+0	01/01/2022	01012022_azure_event_hub_tu...	       19	key concepts	
+1	01/01/2022	01012022_azure_event_hub_tu...	       39	key concepts 2	
+2	01/01/2022	01012022_azure_event_hub_tu...	       65	key concepts	
+

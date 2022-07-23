@@ -1,0 +1,100 @@
+Otsikko: API Authentication with OAuth using Azure AD
+Linkki: https://www.youtube.com/watch?v=59YwW8FrLm8
+
+
+KEY TERMS
+
+OAuth 2.0
+- Industry standard protocol for authorisation
+- OIDC is authentication and authorisation layer built on top of OAuth2
+
+Tokens
+- Lightweight security token that grants "bearer" access to protected resources
+- Generally represented as JWT (JSON Web Token)
+
+Azure AD
+- Is an Identity Provider (IdP)
+- Ensures the user's identity, granting and revoking access to resources, and issuing tokens
+
+App Registrations & Flows
+- Provide authentication and authorisation services for your application and its users
+- Client Credential Flow: permits a web service (confidential client) to use its own credentials, instead of impersonating a user
+
+Azure AD Admin Consent
+- Application Owner can grant the consent for the application
+- Global Admins can grant consent for the entire tenant
+
+
+Demo
+
+
+Register an AAD Application representing a Resource (api)
+
+-> MSDN | App registrations (Azure Active Directory)
+-> New registration
+-> Name: "Resource"
+*
+-> Resource > Overview
+-> Add an Application ID URI (will be used when making a request later)
+*
+-> Resource > App roles
+-> Create app role -> Display name: "FileUpload"
+
+
+Register an AAD Application representing a Client (console app)
+- You can have many of these if you want
+
+-> MSDN | App registrations (Azure Active Directory)
+-> New registration -> Name: "Client1"
+*
+-> API Permissions
+-> Add a permission
+-> My APIs
+-> Name: "Resource" -> Permissions: "FileUpload"
+-> Add permissions (this role information will be part of your token)
+*
+-> API permissions
+-> "FileUpload" -> Grant admin consent for MSDN (possible for global admins)
+
+-> MSDN > Client1
+-> Certificates & secrets
+-> New client secret > Add > Secret ID: 09f689de-4fba-49f7-8fa4-ab319cdede42 (only presented one time)
+*
+-> Client1 > Overview
+-> Application (client) ID: e2777cfd-c44f-4aa8-9387-95eb3e84e097
+
+The client secret and ID from above will become the client's username and password with which to request tokens
+
+
+MSDN > Client1
+-> Overview > Endpoints > OAuth 2.0 token endpoint (v2)
+
+Here you can find the endpoint from which you can request tokens (e.g. using Postman)
+
+POST request body keys
+- grant_type: "client_credentials"
+- client_id
+- client_secret
+- scope: MSDN > Resource > Overview > Application ID URI + "/default"
+
+We receive a token ("access_token") that's valid for X minutes/hours.
+- It can be used to make a second call to the protected API
+
+POST request headers
+- Authorization: "Bearer" + " " + <token>
+
+
+https://jwt.ms
+- Quick way to inspect your jwt tokens like the one above
+
+
+**********************************************************************************************
+
+Oauth 2.0 tutorial Explain Like I’m 5
+Link: https://www.youtube.com/watch?v=hHRFjbGTEOk
+
+
+
+
+
+
